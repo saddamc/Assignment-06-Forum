@@ -1,0 +1,16 @@
+body{
+    font-family: mulish;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-icon {
+    display: flex;
+}
+
+.nav-name{
+    font: 36px;
+    font-weight: 800;
+}
