@@ -14,46 +14,68 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-
-
+    
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-           <div>
+    <header class="header-menu ">
+        <nav class="navbar px-6 ">
+           <div class="nav-header ">
             <!-- ReTro -->
-            <h2 class="nav-name">ReTro</h2>
+            <h1 class="nav-name">ReTro</h1>
 
            </div>
            <div>
             <div class="nav-icon">
                 <!-- nav Icon -->
-                <div class="icon-home">
+                <div class="icon home">
                     <div class="tooltip">Home</div>
                     <span><i class="fa-solid fa-house"></i> </span>
                 </div>
-                <div class="icon-home">
+                <div class="icon edit">
                     <div class="tooltip">Edit</div>
                     <span><i class="fa-regular fa-pen-to-square"></i> </span>
                 </div>
-                <div class="icon-home">
+                <div class="icon add">
                     <div class="tooltip">Add</div>
                     <span><i class="fa-solid fa-user-plus"></i> </span>
                 </div>
-                <div>
+                <div class="icon flag">
+                    <div class="tooltip">Flag</div>
                     <span><i class="fa-regular fa-flag"></i></span>
                 </div>
+                
 
 
             </div>
-            <div>
+            <div class="nav-end">
                 <!-- nav sign in button -->
-                <button class="btn">Sign In</button>
-
+                <button class="btn-sign-in">Sign In</button>              
 
             </div>
            </div>
         </nav>
+        <!-- header background for Forum -->
+       <div class="max-w-[1200px mx-auto]">
+        <div class="w-full bg-[images/bgbanner.png]">
+            <div>
+                <h1>Welcome to the <br> <span>ReTro</span>Forum</h1>
+                <p>Share your favorite opinion and win and wp forum coffee mug!</p>
+                <div>
+                    <label class="input  flex items-center gap-2">
+                        <input type="text" class="grow" placeholder="Search here anything" />
+                        <button id="apply-coupon" class="btn bg-[#36D61D] h-[28px] text-white rounded-xl">Search</button>
+                    </label>
+                    <img src="images/bgbanner.png" alt="">
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+        
+       </div>
     </header>
 
 

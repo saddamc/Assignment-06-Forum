@@ -1,16 +1,121 @@
-body{
-    font-family: mulish;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mulish', sans-serif;
+}
+
+.header-menu {
+    
 }
 
 .navbar {
-    display: flex;
+    background: linear-gradient(315deg, #FFFFFF, #d7e1ec);
+    margin: 0 auto 0 auto;
+    display: grid;
+    height: 130px;
+    width: 1200px;
+    place-items: center;    
     justify-content: space-between;
+    display: inline-flex;
 }
+
+.navbar .icon {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+.navbar .icon span {
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #FFF;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar .icon span i {
+    position: relative;
+    font-size: 20px;
+    line-height: 60px;
+}
+.navbar .icon .tooltip {
+    position: absolute;
+    top: 0px;
+    background: #FFF;
+    color: #FFF;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.navbar .icon:hover .tooltip {
+    opacity: 1;
+    top: -28px;
+    pointer-events: auto;
+}
+.navbar .icon:hover span,
+.navbar .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* something do unique with hover-filling amazing */
+.navbar .icon:hover span,
+.navbar .icon:hover .tooltip,
+.navbar .icon:hover .tooltip:before {
+    background: #797DFC;
+}
+
+.navbar .icon:hover span i {
+    color: #FFF;
+    font-size: 30px;
+}
+
+
+.navbar .icon .tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #FFF;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
 .nav-icon {
+    margin-right: 20px;
     display: flex;
 }
 
-.nav-name{
-    font: 36px;
+.navbar .nav-name{
+    font-size: 36px;
     font-weight: 800;
 }
+
+.btn-sign-in {
+    background-color: #797DFC;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFF;
+    display: block;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
