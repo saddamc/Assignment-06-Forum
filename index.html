@@ -40,7 +40,7 @@
                     <span><i class="fa-solid fa-user-plus"></i> </span>
                 </div>
                 <div class="icon flag">
-                    <div class="tooltip">Flag</div>
+                    <div class="tooltip">Favorite</div>
                     <span><i class="fa-regular fa-flag"></i></span>
                 </div>
                 
@@ -55,22 +55,35 @@
            </div>
         </nav>
         <!-- header background for Forum -->
-       <div class="max-w-[1200px mx-auto]">
-        <div class="w-full bg-[images/bgbanner.png]">
-            <div>
-                <h1>Welcome to the <br> <span>ReTro</span>Forum</h1>
-                <p>Share your favorite opinion and win and wp forum coffee mug!</p>
-                <div>
-                    <label class="input  flex items-center gap-2">
+       <div class="max-w-[1200px mx-auto] ">
+        <div id="background-image"  class="w-full bg-[linear-gradient(360deg,rgba(255,0,0,0.01),rgba(0,0,0,8)),url(./images/bgbanner.png)] bg-no-repeat h-auto flex justify-center text-center bg-center bg-cover rounded-2xl px-[60px] py-[90px] gap-4">
+            <div class="space-y-6 w-[60%] text-left">
+                <h1 class="text-white text-6xl font-bold">Welcome to the <br> <span class="text-[#2a30eb]">ReTro</span> Forum</h1>
+                <p class="text-white opacity-80">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                <div class="flex ">
+                    <label class="input rounded-[35px] flex items-center justify-center gap-1">
                         <input type="text" class="grow" placeholder="Search here anything" />
-                        <button id="apply-coupon" class="btn bg-[#36D61D] h-[28px] text-white rounded-xl">Search</button>
+                        <button id="apply-coupon" class="bg-[#6a6ef2] text-right text-white rounded-[35px] px-[16px] py-[8px]">Search</button>
                     </label>
-                    <img src="images/bgbanner.png" alt="">
                 </div>
 
             </div>
-            <div>
-
+            <div class=" text-black opacity-90 w-[40%] ml-24">
+                <div class=" flex bg-[#fff] justify-center  gap-6 text-left mt-4 mx-[35px] p-4 rounded-xl">
+                    <div class="space-y-5">
+                        <p>Registered Users</p>
+                        <p>Forum</p>
+                        <p>Topics</p>
+                        <p>Replies</p>
+                    </div>
+                    <div class="space-y-5">
+                        <p>01</p>
+                        <p>05</p>
+                        <p>01</p>
+                        <p>01</p>
+                    </div>
+    
+                </div>
             </div>
 
         </div>

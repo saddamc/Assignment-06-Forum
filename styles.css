@@ -115,7 +115,23 @@
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
-
-
-
+/*
+#background-image {
+    background-image: url("./images/bgbanner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+    to bottom,
+    black,
+    rgba(255, 0, 0, 0)
+    
+  )
+}
+*/
 
