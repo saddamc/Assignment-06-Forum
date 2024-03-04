@@ -27,7 +27,7 @@ const displayForums = (forums, event) =>{
         }
 
         const forumCard = document.createElement('div');
-        forumCard.classList = `new-div-element lg:flex rounded-xl border box-border shadow-xl border-[#bbb4b4] py-6 `;
+        forumCard.classList = `new-div-element lg:flex rounded-xl border box-border shadow-xl border-[#bbb4b4] py-6`;
         forumCard.innerHTML = `
                     <div class="p-12 space-y-4">
                         <div id="active-online" class="avatar online ">
@@ -112,30 +112,22 @@ const handleList = (event) =>{
     const forumCard = event.target.closest('.new-div-element');
     console.log(forumCard);
 
-    if(forumCard) {
+    
 
         const title = forumCard.querySelector('#div-title').textContent;
-        const viewCount = forumCard.querySelector('#div-view span').textContent.trim();
+        const viewCount = forumCard.querySelector('#div-view').textContent;
 
         const forumList = document.querySelector('.forum-list');
 
-        if(forumList){
+        
             const listItem = document.querySelector('div');
             listItem.classList.add('forum-list-item');
-            listItem.innerHTML = ` <p>${title} <i id="div-view" class="fa-regular fa-eye">${viewCount}</p>`;
+            listItem.innerHTML = ` <p>${title}  <i id="div-view" class="fa-regular fa-eye"> ${viewCount}</p>`;
             forumList.appendChild(listItem);
         
             const forumCount = document.getElementById('forum-count');
             forumCount.textContent = document.querySelectorAll('.forum-list-item').length;
-        } else {
-            console.log("forum list not found");
-        }
-
-    } else {
-        console.log("forum card not found");
-    }
-
-    
+            
     
 }
 

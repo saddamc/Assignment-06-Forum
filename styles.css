@@ -112,4 +112,19 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+.forum-list-item {
+    /* display: inline-block; */
+    padding: 12px;
+    background-color: white !important;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 20px 0px 15px 0px;
+    font-size: 14px;
+    max-width: fit-content;
+}
+.new-div-element {
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
 
