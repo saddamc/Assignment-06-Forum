@@ -18,10 +18,10 @@ const displayForums = forums =>{
         // console.log(forum);
 
         const forumCard = document.createElement('div');
-        forumCard.classList = `flex rounded-xl border box-border shadow-xl border-[#bbb4b4] py-6 gap-6 `;
+        forumCard.classList = `lg:flex rounded-xl border box-border shadow-xl border-[#bbb4b4] py-6 `;
         forumCard.innerHTML = `
                     <div class="p-12 space-y-4">
-                        <div class="avatar online ">
+                        <div class="avatar online  ">
                             <div class="w-24 rounded-full">
                               <img src="${forum.image}" />
                             </div>
@@ -41,12 +41,13 @@ const displayForums = forums =>{
                         </div>
                         
                        
-                        <div class="space-x-4 space-y-2">
+                        <div class="space-x-4 space-y-2 mx-auto mr-4">
                             <h3 class="text-2xl font-semibold">${forum.title}</h3>
-                            <p>${forum.description}</p>
+                            <p class="">${forum.description}</p>
                         </div>
-                        <hr class="border-dashed border bg-slate-300">
-                        <div class="flex justify-between text-center items-center">
+                        <hr class="border-dashed border bg-slate-300 mr-8">
+                        
+                        <div class="flex justify-between mx-auto mr-8">
                             <div>
                                 <div class="flex items-center space-x-8">
                                 <i class="fa-regular fa-message"><span class="ml-2"></span>${forum.comment_count}</i>
@@ -56,7 +57,7 @@ const displayForums = forums =>{
                                 </div>
                             </div>
                             <div>
-                                <button class="text-center justify-center text-white bg-green-500 border rounded-[50px] p-1 "><i class="fa-solid fa-envelope-open fa-fw "></i></button>
+                                <button class="text-white bg-green-500 border rounded-[50px] p-1 "><i class="fa-solid fa-envelope-open fa-fw "></i></button>
 
                             </div>
                         </div>
