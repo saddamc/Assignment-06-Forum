@@ -8,7 +8,7 @@ const loadComments = async () => {
 }
 
 const displayForums = (forums, event) =>{
-    console.log(forums);
+    // console.log(forums);
 
     const forumContainer = document.getElementById('forum-container');
 
@@ -126,8 +126,17 @@ const handleList = (event) =>{
             forumList.appendChild(listItem);
         
             const forumCount = document.getElementById('forum-count');
-            forumCount.textContent = document.querySelectorAll('.forum-list-item').length;
-            
+            forumCount.textContent = document.querySelectorAll('.forum-list-item').length;           
+    
+}
+
+// <!-- new api function -->
+const latestForum = async () => {
+    const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts");
+    const data = await res.json();
+    // console.log(data);
+    const latestPosts = data.data;
+    console.log(latestPosts);
     
 }
 
