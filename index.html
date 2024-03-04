@@ -62,8 +62,8 @@
                 <!-- search menu -->
                 <div id="show-forum-container" class="flex ">
                     <label class="input rounded-[35px] flex items-center justify-center gap-1">
-                        <input type="text" class="grow" placeholder="Search here anything" />
-                        <button onclick="handleShowAll()" class="bg-[#6a6ef2] text-right text-white rounded-[35px] px-[16px] py-[8px]">Search</button>
+                        <input id="search-field" type="text" class="grow" placeholder="Search here anything" />
+                        <button onclick="handleSearch()" class="bg-[#6a6ef2] text-right text-white rounded-[35px] px-[16px] py-[8px]">Search</button>
                     </label>
                 </div>
 
@@ -97,8 +97,11 @@
             
         </div>
         <section class="mx-auto my-auto max-w-[1200px] ">
-            <div class="lg:flex gap-4 my-4 ">
-                <div id="forum-container" class="mx-auto">
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>             
+            <div class="lg:flex gap-4 my-4 ">                   
+                <div id="forum-container" class="mx-auto">                   
                     <!-- Card forum -->
                     <!-- card - 1 -->
                     <!-- <div class="p-12">

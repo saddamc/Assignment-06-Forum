@@ -1,5 +1,5 @@
 const loadComments = async () => {   
-        const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
+        const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts`);
         const data = await res.json();
         const forums = data.posts;
         // console.log(forums);
@@ -12,6 +12,8 @@ const displayForums = forums =>{
 
     const forumContainer = document.getElementById('forum-container');
 
+    forumContainer.textContent = "";
+
 
 
     forums.forEach(forum => {
@@ -21,12 +23,12 @@ const displayForums = forums =>{
         forumCard.classList = `lg:flex rounded-xl border box-border shadow-xl border-[#bbb4b4] py-6 `;
         forumCard.innerHTML = `
                     <div class="p-12 space-y-4">
-                        <div class="avatar online  ">
+                        <div id="active-online" class="avatar online  ">
                             <div class="w-24 rounded-full">
                               <img src="${forum.image}" />
                             </div>
                           </div>
-                          <div class="avatar offline hidden">
+                          <div id="active-offline" class="avatar offline hidden">
                             <div class="w-24 rounded-full">
                               <img src="${forum.image}" />
                             </div>
@@ -66,8 +68,46 @@ const displayForums = forums =>{
         `;
         forumContainer.appendChild(forumCard);
     })
+    toggleLoadingSpinner(false); 
 
 }
+
+// search the forum
+const loadSearch = async (searchText) => {   
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`);
+    const data = await res.json();
+    const forums = data.posts;
+    // console.log(forums);
+    displayForums(forums);
+    
+}
+
+const handleSearch = () =>{
+    toggleLoadingSpinner(true);
+    const searchField = document.getElementById('search-field');
+    const searchText = searchField.value;
+    // console.log(searchText);
+    loadSearch(searchText);    
+}
+
+const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove("hidden");
+    } else {
+        loadingSpinner.classList.add("hidden");
+    }
+
+}
+
+const onlineLoader = forums =>{
+    const onlineActive = forums.isActive;
+    console.log(onlineActive);
+
+
+  
+}
+   
 
 
 
