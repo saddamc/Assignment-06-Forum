@@ -8,17 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/69851e38e3.js" crossorigin="anonymous"></script>
-
-    
+    <!-- tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    
+    <script src="https://cdn.tailwindcss.com"></script>    
 </head>
 <body>
-    <header class="header-menu ">
-        <nav class="navbar px-6 ">
+    <header class="header-menu mx-auto max-w-[1200px] ">
+        <nav class="navbar px-6 rounded-xl ">
            <div class="nav-header ">
             <!-- ReTro -->
             <h1 class="nav-name">ReTro</h1>
@@ -58,12 +56,14 @@
        <div class="max-w-[1200px mx-auto] ">
         <div id="background-image"  class="w-full bg-[linear-gradient(360deg,rgba(255,0,0,0.01),rgba(0,0,0,8)),url(./images/bgbanner.png)] bg-no-repeat h-auto flex justify-center text-center bg-center bg-cover rounded-2xl px-[60px] py-[90px] gap-4">
             <div class="space-y-6 w-[60%] text-left">
-                <h1 class="text-white text-6xl font-bold">Welcome to the <br> <span class="text-[#2a30eb]">ReTro</span> Forum</h1>
+                <h1 class="text-white text-6xl font-bold">Welcome to the</h1>
+                <h1 class="text-white text-6xl font-bold"><span class="text-[#2a30eb]">ReTro</span> Forum</h1>
                 <p class="text-white opacity-80">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
-                <div class="flex ">
+                <!-- search menu -->
+                <div id="show-forum-container" class="flex ">
                     <label class="input rounded-[35px] flex items-center justify-center gap-1">
                         <input type="text" class="grow" placeholder="Search here anything" />
-                        <button id="apply-coupon" class="bg-[#6a6ef2] text-right text-white rounded-[35px] px-[16px] py-[8px]">Search</button>
+                        <button onclick="handleShowAll()" class="bg-[#6a6ef2] text-right text-white rounded-[35px] px-[16px] py-[8px]">Search</button>
                     </label>
                 </div>
 
@@ -90,6 +90,69 @@
         
        </div>
     </header>
+    <main>
+        <div class="mx-auto my-12 space-y-4 text-center mt-[70px]">
+            <h2 class="text-black text-3xl font-bold">Let's Discuss</h2>
+            <p class="opacity-90">Yes, you can run unit tests and view the results directly within the app. The  <br>integrated testing features allow for a streamlined</p>
+            
+        </div>
+        <section class="mx-auto max-w-[1200px]">
+            <div class="flex gap-4 my-4 ">
+                <div id="forum-container" class="w-full">
+                    <!-- Card forum -->
+                    <!-- card - 1 -->
+                    <!-- <div class="p-12">
+                        <div class="avatar online hidden">
+                            <div class="w-24 rounded-full">
+                              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                          </div>
+                          <div class="avatar offline hidden">
+                            <div class="w-24 rounded-full">
+                              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                          </div>
+                        
+                    </div>
+                    <div class="ml-4 space-y-4 text-[424247]">
+                        <div id="profession-name" class="flex items-center space-x-8">
+                            <p># </p>
+                            <p>Author: </p>
+
+                        </div>
+                        
+                       
+                        <div class="space-x-4 space-y-2">
+                            <h3 class="text-2xl font-semibold">10 Kids</h3>
+                            <p>It's one thing</p>
+                        </div>
+                        <hr class="border-dashed border-2 bg-slate-400">
+                        <div class="flex items-center space-x-8">
+                            <i class="fa-regular fa-message"><span class="ml-2"></span>560</i>
+                            <i class="fa-regular fa-eye"><span class="ml-2">1568</span></i>
+                            <i class="fa-regular fa-clock"><span class="ml-2">5 min</span></i>
+
+                        </div>
+                    </div> -->
+                    <!-- end card -->
+                </div>
+                    
+                <div class="flex w-[40%] bg-slate-200 rounded-xl p-6 justify-between">
+                    <h3 class="text-xl font-semibold">Title</h3>
+                    <p>Mark as read (<span> </span> )</p>
+                    
+                </div>
+                <div>
+    
+                </div>
+            </div>
+            
+
+            
+        </section>
+
+
+    </main>
 
 
 
